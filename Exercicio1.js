@@ -1,7 +1,9 @@
-//  String
-let texto = "Quem sabe um dia Quem sabe um seremos Quem sabe um viveremos Quem sabe um morreremos";
-// Divide a String por palavras e ordena ela
-let lista = texto.split(" ").sort();
+let texto = "um dois dois, tres tres tres.";
+
+let textoTratado = texto.replace(/[,.]/g, ""); //retira ponto e vírgula
+
+let lista = textoTratado.split(" ").sort(); //separa por palavra e ordena
+
 // Recebe o push do for com as Strings e quantas vezes ela se repete
 let palavras = [];
 let repeticao = 1;
@@ -15,8 +17,6 @@ for (let i = 0; i < lista.length; i++) {
     }
 }
 //ordena o array pela quantidade de repetições, do menor pro maior e inverte
-palavras.sort((x,y) => { return x.repeticoes - y.repeticoes }).reverse()
+palavras.sort((x,y) => {return x.repeticoes - y.repeticoes}).reverse()
 
 console.log(palavras)
-
-//dúvida: if (i < ordenacao.length - 1 && ordenacao[i] == ordenacao[i + 1]), linha 10
